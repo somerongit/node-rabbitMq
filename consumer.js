@@ -19,10 +19,12 @@ async function connect() {
 
         channel.consume(queueName, message => {
             const input = JSON.parse(message.content.toString())
-            console.log("Msg(" + input + ") is received from queue(" + queueName + ")...");
+
+            console.log("Msg received from queue(" + queueName + "):")
+            console.log(input);
+            console.log("Waiting for msg from queue(" + queueName + ")...")
         })
 
-        console.log("Waiting for msg from queue(" + queueName + ")...");
 
     } catch (error) {
         console.log("Error: " + error);

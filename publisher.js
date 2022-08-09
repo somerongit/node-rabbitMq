@@ -17,11 +17,11 @@ async function connect() {
         console.log("Queue(" + queueName + ") is connected...");
 
 
-        console.log("Sending msg(" + msg + ") to queue(" + queueName + ")...");
+        console.log("Sending msg(" + JSON.stringify(msg) + ") to queue(" + queueName + ")...");
 
         await channel.sendToQueue(queueName, Buffer.from(JSON.stringify(msg)))
 
-        console.log("Msg(" + msg + ") send to queue(" + queueName + ")...");
+        console.log("Msg(" + JSON.stringify(msg) + ") send to queue(" + queueName + ")...");
 
         await channel.close()
         await connection.close()
