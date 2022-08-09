@@ -1,0 +1,22 @@
+{
+  "name": "node-rabbitmq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "consumer.js",
+  "scripts": {
+    "start": "node consumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somerongit/node-rabbitMq.git"
+  },
+  "author": "Someron Bakuli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/somerongit/node-rabbitMq/issues"
+  },
+  "homepage": "https://github.com/somerongit/node-rabbitMq#readme",
+  "dependencies": {
+    "amqplib": "^0.10.2"
+  }
+}
